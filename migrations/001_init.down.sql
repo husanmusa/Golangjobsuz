@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS recruiter_access;
+DROP TABLE IF EXISTS audit_logs;
+DROP TABLE IF EXISTS broadcasts;
+DROP TABLE IF EXISTS draft_profiles;
+DROP TABLE IF EXISTS profiles;
+DROP TABLE IF EXISTS users;
