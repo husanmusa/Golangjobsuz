@@ -1,3 +1,6 @@
+module github.com/example/golangjobsuz
+
+go 1.21
 module Golangjobsuz
 
 go 1.21
