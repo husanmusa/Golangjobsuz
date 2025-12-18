@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/golangjobs?sslmode=disable
+      - AI_ENDPOINT=http://mockai:18081/complete
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - mockai
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: golangjobs
+    ports:
+      - "5432:5432"
+  mockai:
+    build: ./deploy/mock-ai
+    ports:
+      - "18081:18081"
