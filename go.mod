@@ -1,3 +1,6 @@
+module github.com/example/golangjobsuz
+
+go 1.22.0
 module golangjobsuz
 
 go 1.22
