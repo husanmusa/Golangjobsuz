@@ -1,0 +1,5 @@
+# build artifacts
+/golangjobsuz
+
+# generated data
+/data/store.json
