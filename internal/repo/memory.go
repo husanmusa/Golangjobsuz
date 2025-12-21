@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Golangjobsuz/bot/internal/entities"
+	"github.com/Golangjobsuz/golangjobsuz/internal/entities"
 )
 
 // InMemoryUserRepository provides a thread-safe user store for prototyping.

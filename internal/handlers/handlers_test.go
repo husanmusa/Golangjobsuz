@@ -8,8 +8,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/example/golangjobsuz/internal/parser"
-	"github.com/example/golangjobsuz/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/parser"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
 )
 
 type stubPipeline struct{}

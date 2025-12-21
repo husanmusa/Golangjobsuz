@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"golangjobsuz/internal/store"
+	"github.com/Golangjobsuz/golangjobsuz/internal/store"
 )
 
 // ApproveRecruiter marks a user as an approved recruiter and updates their role.

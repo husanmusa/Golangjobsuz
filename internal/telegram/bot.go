@@ -8,9 +8,9 @@ import (
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
-	"github.com/Golangjobsuz/bot/internal/entities"
-	"github.com/Golangjobsuz/bot/internal/platform/logger"
-	"github.com/Golangjobsuz/bot/internal/usecase"
+	"github.com/Golangjobsuz/golangjobsuz/internal/entities"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/logger"
+	"github.com/Golangjobsuz/golangjobsuz/internal/usecase"
 )
 
 // Bot encapsulates Telegram-specific wiring and lifecycle management.

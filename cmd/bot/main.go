@@ -9,15 +9,15 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Golangjobsuz/bot/internal/ai"
-	"github.com/Golangjobsuz/bot/internal/platform/config"
-	"github.com/Golangjobsuz/bot/internal/platform/database"
-	"github.com/Golangjobsuz/bot/internal/platform/httpclient"
-	"github.com/Golangjobsuz/bot/internal/platform/logger"
-	"github.com/Golangjobsuz/bot/internal/platform/metrics"
-	"github.com/Golangjobsuz/bot/internal/repo"
-	"github.com/Golangjobsuz/bot/internal/telegram"
-	"github.com/Golangjobsuz/bot/internal/usecase"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ai"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/config"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/database"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/httpclient"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/logger"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/metrics"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/telegram"
+	"github.com/Golangjobsuz/golangjobsuz/internal/usecase"
 )
 
 func main() {

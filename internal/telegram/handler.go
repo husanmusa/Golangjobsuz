@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
-	"Golangjobsuz/internal/ingest"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ingest"
 )
 
 // Handler processes Telegram updates for document and link ingestion.
