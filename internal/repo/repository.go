@@ -77,7 +77,7 @@ func (r *Repository) List(_ context.Context) ([]Job, error) {
 	}
 	return jobs, nil
 
-	"github.com/Golangjobsuz/bot/internal/entities"
+	"github.com/Golangjobsuz/golangjobsuz/internal/entities"
 )
 
 // UserRepository persists Telegram user information.
