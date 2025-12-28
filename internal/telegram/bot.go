@@ -8,9 +8,10 @@ import (
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
-	"github.com/Golangjobsuz/bot/internal/entities"
-	"github.com/Golangjobsuz/bot/internal/platform/logger"
-	"github.com/Golangjobsuz/bot/internal/usecase"
+	"github.com/Golangjobsuz/golangjobsuz/internal/entities"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ingest"
+	"github.com/Golangjobsuz/golangjobsuz/internal/platform/logger"
+	"github.com/Golangjobsuz/golangjobsuz/internal/usecase"
 )
 
 // Bot encapsulates Telegram-specific wiring and lifecycle management.
@@ -19,10 +20,11 @@ type Bot struct {
 	usecases usecase.BotUseCase
 	logger   logger.Logger
 	client   *http.Client
+	ingester *Handler
 }
 
 // New constructs a Bot with the provided token and dependencies.
-func New(token string, usecases usecase.BotUseCase, log logger.Logger) (*Bot, error) {
+func New(token string, usecases usecase.BotUseCase, log logger.Logger, service *ingest.Service, maxSize int64, allowed []string) (*Bot, error) {
 	if token == "" {
 		return nil, errors.New("telegram token is required")
 	}
@@ -34,7 +36,12 @@ func New(token string, usecases usecase.BotUseCase, log logger.Logger) (*Bot, er
 
 	api.Client.Timeout = 60 * time.Second
 
-	return &Bot{api: api, usecases: usecases, logger: log, client: api.Client}, nil
+	var ingester *Handler
+	if service != nil {
+		ingester = NewHandler(api, service, maxSize, allowed)
+	}
+
+	return &Bot{api: api, usecases: usecases, logger: log, client: api.Client, ingester: ingester}, nil
 }
 
 // Start begins polling for updates and processing incoming messages.
@@ -62,6 +69,17 @@ func (b *Bot) Start(ctx context.Context) error {
 func (b *Bot) handleUpdate(ctx context.Context, update tgbotapi.Update) {
 	if update.Message == nil {
 		return
+	}
+
+	if b.ingester != nil {
+		if update.Message.Document != nil || extractLink(update.Message) != "" {
+			response := b.ingester.ProcessUpdate(ctx, update)
+			reply := tgbotapi.NewMessage(update.Message.Chat.ID, response)
+			if _, err := b.api.Send(reply); err != nil {
+				b.logger.Error().Err(err).Msg("send telegram message")
+			}
+			return
+		}
 	}
 
 	username := ""

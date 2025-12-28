@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"golangjobsuz/internal/commands"
-	"golangjobsuz/internal/search"
-	"golangjobsuz/internal/store"
+	"github.com/Golangjobsuz/golangjobsuz/internal/commands"
+	"github.com/Golangjobsuz/golangjobsuz/internal/search"
+	"github.com/Golangjobsuz/golangjobsuz/internal/store"
 )
 
 func main() {

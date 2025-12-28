@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/example/golangjobsuz/internal/ai"
-	"github.com/example/golangjobsuz/internal/config"
-	"github.com/example/golangjobsuz/internal/handlers"
-	"github.com/example/golangjobsuz/internal/parser"
-	"github.com/example/golangjobsuz/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ai"
+	"github.com/Golangjobsuz/golangjobsuz/internal/config"
+	"github.com/Golangjobsuz/golangjobsuz/internal/handlers"
+	"github.com/Golangjobsuz/golangjobsuz/internal/parser"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
 )
 
 // Run bootstraps dependencies and starts the HTTP server.

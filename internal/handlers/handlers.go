@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/example/golangjobsuz/internal/parser"
-	"github.com/example/golangjobsuz/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/parser"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
 )
 
 // API bundles dependencies for HTTP handlers.
@@ -90,9 +90,9 @@ func writeError(w http.ResponseWriter, status int, err error) {
 
 	"log/slog"
 
-	"Golangjobsuz/internal/metrics"
-	"Golangjobsuz/internal/notifier"
-	"Golangjobsuz/internal/trace"
+	"github.com/Golangjobsuz/golangjobsuz/internal/metrics"
+	"github.com/Golangjobsuz/golangjobsuz/internal/notifier"
+	"github.com/Golangjobsuz/golangjobsuz/internal/trace"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/example/golangjobsuz/internal/server"
+	"github.com/Golangjobsuz/golangjobsuz/internal/server"
 )
 
 func main() {
@@ -23,11 +23,11 @@ func main() {
 	"net/http"
 	"time"
 
-	"Golangjobsuz/internal/handlers"
-	"Golangjobsuz/internal/logging"
-	"Golangjobsuz/internal/metrics"
-	"Golangjobsuz/internal/middleware"
-	"Golangjobsuz/internal/notifier"
+	"github.com/Golangjobsuz/golangjobsuz/internal/handlers"
+	"github.com/Golangjobsuz/golangjobsuz/internal/logging"
+	"github.com/Golangjobsuz/golangjobsuz/internal/metrics"
+	"github.com/Golangjobsuz/golangjobsuz/internal/middleware"
+	"github.com/Golangjobsuz/golangjobsuz/internal/notifier"
 )
 
 func main() {

@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/example/golangjobsuz/internal/ai"
-	"github.com/example/golangjobsuz/internal/parser"
-	"github.com/example/golangjobsuz/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ai"
+	"github.com/Golangjobsuz/golangjobsuz/internal/parser"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
 )
 
 // Integration between parser and repository using the in-memory test database.

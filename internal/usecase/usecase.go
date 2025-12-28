@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Golangjobsuz/bot/internal/ai"
-	"github.com/Golangjobsuz/bot/internal/entities"
-	"github.com/Golangjobsuz/bot/internal/repo"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ai"
+	"github.com/Golangjobsuz/golangjobsuz/internal/entities"
+	"github.com/Golangjobsuz/golangjobsuz/internal/repo"
 )
 
 // BotUseCase describes the operations the bot layer can trigger.

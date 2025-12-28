@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"Golangjobsuz/internal/extract"
-	"Golangjobsuz/internal/storage"
+	"github.com/Golangjobsuz/golangjobsuz/internal/extract"
+	"github.com/Golangjobsuz/golangjobsuz/internal/storage"
 )
 
 // Config controls validation, timeouts, and allowed file types.

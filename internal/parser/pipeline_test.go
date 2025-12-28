@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/example/golangjobsuz/internal/ai"
+	"github.com/Golangjobsuz/golangjobsuz/internal/ai"
 )
 
 func TestPipelineParse(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/example/golangjobsuz/broadcast"
-	"github.com/example/golangjobsuz/contact"
+	"github.com/Golangjobsuz/golangjobsuz/broadcast"
+	"github.com/Golangjobsuz/golangjobsuz/contact"
 )
 
 // consoleSender writes messages to stdout for demonstration purposes.

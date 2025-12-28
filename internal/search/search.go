@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"golangjobsuz/internal/store"
+	"github.com/Golangjobsuz/golangjobsuz/internal/store"
 )
 
 // Filters used for profile search.

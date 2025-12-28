@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"golangjobsuz/internal/store"
+	"github.com/Golangjobsuz/golangjobsuz/internal/store"
 )
 
 func TestSearchFiltersAndPagination(t *testing.T) {
